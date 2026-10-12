@@ -267,4 +267,13 @@
             }
             matn += `\n💰 Jami summa: ${jami.toLocaleString('uz-UZ')} so'm`;
 
-            if (window.Telegram && window.Telegram.WebApp) {
+            if (window.Telegram && window.Telegram.WebApp) {                window.Telegram.WebApp.sendData(matn);
+                alert("Buyurtmangiz botga yuborildi!");
+            } else {
+                alert("Buyurtma matni:\n\n" + matn +
+                      "\n\nBu sahifani Telegram bot ichidan oching.");
+            }
+        }
+    </script>
+</body>
+</html>
