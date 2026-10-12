@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRESH ⚡ BURGER</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #181818;
+            color: white;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 110px;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            border-bottom: 2px solid #4CAF50;
+        }
+        .header h1 {
+            color: #4CAF50;
+            margin: 0;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .section-title {
+            background-color: #2c2c2c;
+            padding: 8px 15px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #4CAF50;
+            border-left: 4px solid #4CAF50;
+            margin-top: 15px;
+        }
+        .container {
+            padding: 12px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        .card {
+            background-color: #242424;
+            border-radius: 12px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card-emoji {
+            font-size: 40px;
+            margin: 5px 0;
+        }
+        .card-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin: 5px 0;
+            min-height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card-price {
+            color: #4CAF50;
+            font-weight: bold;
+            font-size: 14px;
+            margin: 5px 0 10px 0;
+        }
+        .btn-add {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+        }
+        .footer-cart {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #222;
+            padding: 20px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 2px solid #333;
+            z-index: 9999;
+        }
+        .cart-info {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .btn-order {
+            background-color: #e67e22;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 25px;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>FRESH ⚡ BURGER</h1>
+    </div>
+
+    <div class="section-title">Xot-Doglar</div>
+    <div class="container">
+        <div class="card">
+            <div class="card-emoji">🌭</div>
+            <div class="card-title">Xot-Dog 2 Sosiskali</div>
+            <div class="card-price">12 000 soʻm</div>
+            <button class="btn-add" onclick="qooshish('Xot-Dog 2 Sosiskali', 12000)">Qoʻshish</button>
+        </div>
+        <div class="card">
+            <div class="card-emoji">🌭</div>
+            <div class="card-title">Xot-Dog 3 Sosiskali</div>
+            <div class="card-price">15 000 soʻm</div>
+            <button class="btn-add" onclick="qooshish('Xot-Dog 3 Sosiskali', 15000)">Qoʻshish</button>
+        </div>
+        <div class="card">
+            <div class="card-emoji">🌭</div>
+            <div class="card-title">Xot-Dog 4 Sosiskali</div>
+            <div class="card-price">18 000 soʻm</div>
+            <button class="btn-add" onclick="qooshish('Xot-Dog 4 Sosiskali', 18000)">Qoʻshish</button>
+        </div>
+        <div class="card">
+            <div class="card-emoji">🌭</div>
+            <div class="card-title">Xot-Dog Canada</div>
+            <div class="card-price">13 000 soʻm</div>
+            <button class="btn-add" onclick="qooshish('Xot-Dog Canada', 13000)">Qoʻshish</button>
+        </div>
+        <div class="card">
+            <div class="card-emoji">🌭</div>
+            <div class="card-title">Xot-Dog Canada 2x</div>
+            <div class="card-price">16 000 soʻm</div>
+            <button class="btn-add" onclick="qooshish('Xot-Dog Canada 2x', 16000)">Qoʻshish</button>
+        </div>
+        <div class="card">
+            <div class="card-emoji">🌭</div>
+            <div class="card-title">Xot-Dog Canada 3x</div>
+            <div class="card-price">20 000 soʻm</div>
+            <button class="btn-add" onclick="qooshish('Xot-Dog Canada 3x', 20000)">Qoʻshish</button>
+        </div>
+        <div class="card">
+            <div class="card-emoji">🌭</div>
+            <div class="card-title">Xot-Dog Canada 4x</div>
+            <div class="card-price">22 000 soʻm</div>
+            <button class="btn-add" onclick="qooshish('Xot-Dog Canada 4x', 22000)">Qoʻshish</button>
+        </div>
+        <div class="card">
+            <div class="card-emoji">🍢</div>
+            <div class="card-title">Xot-Dog 1ta Shashlikli</div>
+            <div class="card-price">25 000 soʻm</div>
+            <button class="btn-add" onclick="qooshish('Xot-Dog 1ta Shashlikli', 25000)">Qoʻshish</button>
+        </div>
+        <div class="card">
+            <div class="card-emoji">🍢</div>
+            <div class="card-title">Xot-Dog 2ta Shashlikli</div>
+            <div class="card-price">38 000 soʻm</div>
+            <button class="btn-add" onclick="qooshish('Xot-Dog 2ta Shashlikli', 38000)">Qoʻshish</button>
+        </div>
+    </div>
+
+    <div class="section-title">Taomlar va Fri</div>
+    <div class="container">
+        <div class="card">
+            <div class="card-emoji">🍟</div>
+            <div class="card-title">Kartoshka Fri 1kg</div>
+            <div class="card-price">22 000 soʻm</div>
+            <button class="btn-add" onclick="qooshish('Kartoshka Fri 1kg', 22000)">Qoʻshish</button>
+        </div>
+        <div class="card">
+            <div class="card-emoji">🍗</div>
+            <div class="card-title">KFC 1kg</div>
+            <div class="card-price">65 000 soʻm</div>
+            <button class="btn-add" onclick="qooshish('KFC 1kg', 65000)">Qoʻshish</button>
+        </div>
+    </div>
+
+    <div class="section-title">Ichimliklar</div>
+    <div class="container">
+        <div class="card">
+            <div class="card-emoji">🥤</div>
+            <div class="card-title">Cola 2L</div>
+            <div class="card-price">20 000 soʻm</div>
+            <button class="btn-add" onclick="qooshish('Cola 2L', 20000)">Qoʻshish</button>
+        </div>
+        <div class="card">
+            <div class="card-emoji">🥤</div>
+            <div class="card-title">Cola 1.5L</div>
+            <div class="card-price">15 000 soʻm</div>
+            <button class="btn-add" onclick="qooshish('Cola 1.5L', 15000)">Qoʻshish</button>
+        </div>
+        <div class="card">
+            <div class="card-emoji">🥤</div>
+            <div class="card-title">Cola 1L</div>
+            <div class="card-price">12 000 soʻm</div>
+            <button class="btn-add" onclick="qooshish('Cola 1L', 12000)">Qoʻshish</button>
+        </div>
+        <div class="card">
+            <div class="card-emoji">🍾</div>
+            <div class="card-title">Shishali Cola 0.5L</div>
+            <div class="card-price">5 000 soʻm</div>
+            <button class="btn-add" onclick="qooshish('Shishali Cola 0.5L', 5000)">Qoʻshish</button>
+        </div>
+        <div class="card">
+            <div class="card-emoji">🍾</div>
+            <div class="card-title">Shishali Fanta 0.5L</div>
+            <div class="card-price">5 000 soʻm</div>
+            <button class="btn-add" onclick="qooshish('Shishali Fanta 0.5L', 5000)">Qoʻshish</button>
+        </div>
+        <div class="card">
+            <div class="card-emoji">🥤</div>
+            <div class="card-title">Fanta 1L</div>
+            <div class="card-price">12 000 soʻm</div>
+            <button class="btn-add" onclick="qooshish('Fanta 1L', 12000)">Qoʻshish</button>
+        </div>
+        <div class="card">
+            <div class="card-emoji">☕</div>
+            <div class="card-title">Kofe</div>
+            <div class="card-price">5 000 soʻm</div>
+            <button class="btn-add" onclick="qooshish('Kofe', 5000)">Qoʻshish</button>
+        </div>
+    </div>
+
+    <div class="footer-cart">
+        <div class="cart-info" id="jami-pul">Savatcha: 0 soʻm</div>
+        <button class="btn-order" onclick="jo'natish()">Buyurtma berish</button>
+    </div>
+
+    <script src="https://telegram.org"></script>
+    <script>
+        let jami = 0;
+        let savatcha = {};
+
+        function qooshish(nomi, narxi) {
+            jami += narxi;
+            if (savatcha[nomi]) {
+                savatcha[nomi].soni += 1;
+            } else {
+                savatcha[nomi] = { narxi: narxi, soni: 1 };
+            }
+            document.getElementById('jami-pul').innerText = "Savatcha: " + jami.toLocaleString('uz-UZ') + " soʻm";
+        }
+
+        function jo'natish() {
+            if (jami === 0) {
+                alert("Savatchangiz bo'sh!");
+                return;
+            }
+
+            let matn = "⚡️ YANGI BUYURTMA ⚡️\n\n";
+            for (const [nomi, info] of Object.entries(savatcha)) {
+                matn += `▪️ ${nomi} x${info.soni} - ${(info.narxi * info.soni).toLocaleString('uz-UZ')} so'm\n`;
+            }
+            matn += `\n💰 Jami summa: ${jami.toLocaleString('uz-UZ')} so'm`;
+
+            if (window.Telegram && window.Telegram.WebApp) {
